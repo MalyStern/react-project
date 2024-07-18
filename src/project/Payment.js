@@ -1,30 +1,14 @@
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
-import logo from "../jewerly pictures/logo.png"
+import Nav from'./nav';
+
 export default function Payment() {
     const navigate = useNavigate()
     const items = useSelector((state) => state.CartReducer)
     var sum = 0;
     return (
         <>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-mine">
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                           <a class="nav-link bt" onClick={() => navigate("/")}><img id="logo" src={logo}></img></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bt" onClick={() => navigate("/About")} >About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bt" onClick={() => navigate("/")}>Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bt" onClick={() => navigate("/Cart")}>Cart</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <Nav></Nav>
             <p class="title">Your Order</p>
             <div id="table" class="table-responsive">
                 <table class="table table-hover">

@@ -1,26 +1,11 @@
-import logo from "../jewerly pictures/logo.png"
+
 import { useNavigate } from "react-router-dom"
+import Nav from'./nav';
+
 export default function About() {
     const navigate = useNavigate()
     return (<>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-mine">
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                    <a class="nav-link bt" onClick={() => navigate("/")}><img id="logo" src={logo}></img></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link bt" onClick={() => navigate("/About")} >About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link bt" onClick={() => navigate("/")}>Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link bt" onClick={() => navigate("/Cart")}>Cart</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <Nav></Nav>
         <p class="title">ABOUT PANDORA</p>
         <div class="longtext"><p>
         
@@ -41,6 +26,6 @@ Pandora operates and manages a vertically integrated business model from in-hous
 Pandora’s mission – then and today – is to offer women across the world a universe of high quality, <br></br>hand-finished, modern and genuine jewelry products at affordable prices, thereby inspiring women to express their individuality. All women have their individual stories to tell – a personal collection of special moments that makes them who they are. That is why we celebrate these moments. That is why we say these moments are unforgettable. Like the story of Pandora.
         </p></div>
         <button class="b btn btn-outline-dark" onClick={() =>
-            navigate("/StoreItems")}>see products</button>
+            navigate("/")}>see products</button>
     </>)
 }

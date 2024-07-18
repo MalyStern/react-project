@@ -8,7 +8,6 @@ export default function Navigator() {
     return(
     <BrowserRouter>
         <Routes>
-            {/* <Route exact path="/" element={<Home/>} /> */}
             <Route exact path="/" element={<StoreItems/>} />
             <Route exact path="/Cart" element={<Cart/>} />
             <Route exact path="/Payment" element={<Payment/>}/>
